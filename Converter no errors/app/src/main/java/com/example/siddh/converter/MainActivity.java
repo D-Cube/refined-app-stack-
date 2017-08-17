@@ -92,25 +92,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     @Override
                     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
+                    }
 
+                    @Override
+                    public void afterTextChanged(Editable editable) {
                         if (convertFrom != null) {
 
                             double currencyRate = Double.parseDouble(String.valueOf(exchangeRate));
                             double value = Double.parseDouble(convertFrom.getText().toString());
                             double ans = value * currencyRate;
-                            Log.i("Exchange", String.valueOf(ans));
-                            textView.setText(String.format("%2f", ans));
-                        } else if (convertFrom == null || convertFrom.equals("")) {
 
-                            textView.setText("Enter Value Above");
+                            //Toast.makeText(MainActivity.this, "Exchange"+String.valueOf(ans), Toast.LENGTH_SHORT).show();
+
+                            textView.setText(String.format("%2f", ans));
 
                         }
-
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-
 
                     }
                 });
