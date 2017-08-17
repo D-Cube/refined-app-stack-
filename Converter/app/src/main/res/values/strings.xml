@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Converter</string>
+
+    <string-array name="array">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>JPY</item>
+        <item>GBP</item>
+        <item>AUD</item>
+        <item>INR</item>
+    </string-array>
+
+</resources>
